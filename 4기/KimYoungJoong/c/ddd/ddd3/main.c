@@ -4,6 +4,7 @@
 #include "common/util/custom_random.h"
 #include "common/util/custom_alarm.h"
 #include "entity/receive/rf_receive.h"
+#include "entity/receive/wifi_receive.h"
 #include "domain_service/dto/dto.h"
 
 
@@ -12,6 +13,7 @@ int main (void)
 {
     printf("program strat!!\n");
     rf_ch_init();
+    wifi_init();
 
     custom_random_init();
     timer_init();

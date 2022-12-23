@@ -33,6 +33,7 @@ void receive_rf_signal (void)
 void printf_rf_signal (void)
 {    
     //current_rf_channel = 0;
+    
     printf("rf_ch1 : %d, ", rf_receive_object_data[0].data);
     printf("rf_ch2 : %d, ", rf_receive_object_data[1].data);
     printf("rf_ch3 : %d, ", rf_receive_object_data[2].data);
@@ -41,6 +42,8 @@ void printf_rf_signal (void)
     printf("rf_ch6 : %d, ", rf_receive_object_data[5].data);
     printf("rf_ch7 : %d, ", rf_receive_object_data[6].data);
     printf("rf_ch8 : %d" , rf_receive_object_data[7].data);
+    
+    //printf("rf_ch3 : %d, ", rf_receive_object_data[2].data);
     printf("\n");
 
     //if(current_rf_channel == RF_CH_NUMBER) current_rf_channel = 0;

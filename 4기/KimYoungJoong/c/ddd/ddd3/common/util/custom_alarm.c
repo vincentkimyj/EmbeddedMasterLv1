@@ -5,6 +5,7 @@
 
 #include "custom_alarm.h"
 #include "../../entity/receive/rf_receive.h"
+#include "../../entity/receive/wifi_receive.h"
 #include "../../domain_service/dto/dto.h"
 /*
 void init_custom_alarm (void)
@@ -31,10 +32,13 @@ void timer_handler (int signum)
     //printf("timer expired %d timers\n", ++count);
     receive_rf_signal();
 
-    printf_rf_signal();
-    servo_data_trans_object(RF, CHANNEL1);
-    dc_motor_data_trans_object(RF, CHANNEL2, rf_receive_object_data->dc_motor_sub_order);
+    //printf_rf_signal();
+    //servo_data_trans_object(RF, CHANNEL1);
+    //dc_motor_data_trans_object(RF, CHANNEL2, rf_receive_object_data->dc_motor_sub_order);
     led_data_trans_object(RF,CHANNEL3);
+
+    //receive_wifi_signal();
+    //printf_wifi_signal();
     
 }
 
